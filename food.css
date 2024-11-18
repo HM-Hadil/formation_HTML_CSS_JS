@@ -1,0 +1,117 @@
+body {
+    font-family:'Montserrat';
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color:#FD7646 ;
+    height: 5rem;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 0.5rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+
+  }
+  a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 20px;
+  }
+  .btn-login{
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 30px ;
+    width: 125px;
+    height: 30px;
+    text-align: center;
+    padding-top: 4px;
+    margin-left: 2rem;
+   
+  }
+  .btn-login a{
+    color: #FD7646;
+  }
+  main{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    
+  }
+  .filter {
+    display: flex;
+    gap: 30px;
+    margin-left: -2rem;
+  }
+  
+  .filter li{
+    list-style: none;
+    font-family: 'roboto';
+    font-size: 20px;
+  }
+  .line_orange:hover{
+    border-bottom: 2px solid #FD7646;
+  }
+
+
+  
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .products {
+    padding-top:  20px;
+    text-align: center;
+    width: 100%;
+  }
+  .card{
+    width: 12rem;
+    height: 12rem;
+    display: flex;
+    padding-top: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 5px  rgb(0, 0, 0,0.2);
+    border-radius: 30px;
+
+  }
+  .image{
+    width: 6rem;
+    height: 6rem;
+  }
+  .image img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+
+  }
+  .price{
+   display: flex;
+   gap: 50px;
+   color: #FD7646;
+   font-size: 20px;
+  }
+footer{
+    width: 100%;
+    height: 3rem;
+    background-color: #FD7646;
+    position: absolute;
+    bottom: 0 !important; 
+}
+
+.buy-button:hover{
+  cursor: pointer;
+}
