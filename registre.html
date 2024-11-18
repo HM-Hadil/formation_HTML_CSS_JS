@@ -57,5 +57,53 @@
       </div>
       <div class="orange-footer"></div>
     </div>
+    <script>
+      // Select the form and inputs
+const form = document.querySelector("form");
+const fullNameInput = form.querySelector("input[placeholder='Full Name']");
+const emailPhoneInput = form.querySelector("input[placeholder='Adresse email or phone number']");
+const passwordInput = form.querySelector("input[placeholder='Password']");
+const submitButton = form.querySelector(".btn-submit");
+
+// Add an event listener to handle form submission
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); // Prevent default form submission
+
+  // Get input values and trim to remove extra spaces
+  const fullName = fullNameInput.value.trim();
+  const emailPhone = emailPhoneInput.value.trim();
+  const password = passwordInput.value.trim();
+
+  // Validation
+  if (fullName === "") {
+    alert("Full Name is required.");
+    return;
+  }
+
+  if (emailPhone === "") {
+    alert("Email or phone number is required.");
+    return;
+  }
+
+  // Regex for email and phone number validation
+  const emailRegex = /^\S+@\S+\.\S+$/; // Simple email regex
+  const phoneRegex = /^[0-9]{10,15}$/; // Phone number: 10 to 15 digits
+
+  if (!emailRegex.test(emailPhone) && !phoneRegex.test(emailPhone)) {
+    alert("Please enter a valid email address or phone number.");
+    return;
+  }
+
+  if (password.length < 6) {
+    alert("Password must be at least 6 characters long.");
+    return;
+  }
+
+  // If all validations pass
+  alert("Account successfully created!");
+  form.reset(); // Reset the form
+});
+
+    </script>
   </body>
 </html>
